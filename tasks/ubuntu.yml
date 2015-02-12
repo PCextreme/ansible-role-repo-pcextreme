@@ -1,0 +1,12 @@
+---
+- name: Add repo file
+  template: src=pcextreme.list.j2 dest=/etc/apt/sources.list.d/pcextreme.list owner=root group=root mode=0644
+  register: pcextreme_list
+
+- name: Add repo key
+  apt_key: id=CF7892171A4AA2C3 url=https://www.pcextreme.nl/pcextreme_signing.key state=present
+  register: pcextreme_key
+
+- name: Update apt cache
+  apt: update_cache=yes
+  when: pcextreme_list.changed == True or pcextreme_key.changed == True
