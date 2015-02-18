@@ -1,5 +1,5 @@
 [pcextreme-main]
-name=PCextreme Packages for CentOS {{ ansible_distribution_major_version|int }} - $basearch
+name=PCextreme Software Repository for CentOS {{ ansible_distribution_major_version|int }} - $basearch
 baseurl=http://packages.pcextreme.nl/centos/{{ ansible_distribution_major_version|int }}/main/$basearch/
 enabled={{ '1' if repo_pcextreme_main else '0' }}
 gpgcheck=1
@@ -7,15 +7,15 @@ gpgkey=https://www.pcextreme.nl/pcextreme_signing.key
 #gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-pcextreme
 
 [pcextreme-updates]
-name=PCextreme Packages for CentOS {{ ansible_distribution_major_version|int }} - $basearch
+name=PCextreme Software Repository for CentOS {{ ansible_distribution_major_version|int }} - $basearch
 baseurl=http://packages.pcextreme.nl/centos/{{ ansible_distribution_major_version|int }}/updates/$basearch/
-gpgcheck=1
 enabled={{ '1' if repo_pcextreme_updates else '0' }}
+gpgcheck=1
 gpgkey=https://www.pcextreme.nl/pcextreme_signing.key
 #gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-pcextreme
 
 [pcextreme-testing]
-name=PCextreme Packages for CentOS {{ ansible_distribution_major_version|int }} - $basearch
+name=PCextreme Software Repository for CentOS {{ ansible_distribution_major_version|int }} - $basearch
 baseurl=http://packages.pcextreme.nl/centos/{{ ansible_distribution_major_version|int }}/testing/$basearch/
 enabled={{ '1' if repo_pcextreme_testing else '0' }}
 gpgcheck=1

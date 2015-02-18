@@ -1,6 +1,6 @@
-# Ansible Role: PCextreme repository
+# Ansible Role: PCextreme Repository
 
-Extra Packages
+PCextreme Linux Software Repository
 
 ## Supported platforms
 
@@ -37,7 +37,7 @@ None
 
 ## License
 
-MIT / BSD
+MIT
 
 ## Author Information
 

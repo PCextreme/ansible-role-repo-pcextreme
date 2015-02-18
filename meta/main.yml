@@ -1,9 +1,9 @@
 ---
 galaxy_info:
   author: "Attila van der Velde"
-  description: "PCextreme repository"
+  description: "PCextreme Linux Software Repository"
   company: "PCextreme B.V."
-  license: "license (MIT, BSD)"
+  license: "license (MIT)"
   min_ansible_version: 1.8
   platforms:
     - name: EL
